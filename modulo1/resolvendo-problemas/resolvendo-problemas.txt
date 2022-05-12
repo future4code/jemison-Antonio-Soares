@@ -1,0 +1,19 @@
+7 PASSOS RESUMO 
+
+1 - entender o que o enunciado está querendo de nós progamadores,o que faço
+e quebrar o enunciado para entender melhor.
+
+2- pegar as informações mais relevantes do enunciado, como eu quebro o enunciado isso já
+facilita essa retirada de informações.
+
+3- Entender o que vai entrar de informações e o qur o programa vai "executar" das informações.
+
+4- Antes de ir para o codigo faça um fluxograma, do que você vai ser executar,isso 
+facilita na hora de montar o codigo.
+
+5- Criar um codigo que sejá funcional mesmo que estejá "bagunçado".
+
+6- testar o codigo "feio" de todas as maneiras que encontrei que seria possivel.
+
+7- Deixar o codigo de uma maneira mas organizada e com boas praticas, facilitando quem for modificar, ou 
+dar continuidade no codigo. 
