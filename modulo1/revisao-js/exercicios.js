@@ -12,37 +12,66 @@ function retornaTamanhoArray(array) {
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-  
+   return array.reverse()
 }
 
+
 // EXERCÍCIO 03
-function retornaArrayOrdenado(array) {
-  
+ function retornaArrayOrdenado(array) {
+     return array.sort((a,b) =>{
+     if(a>b) return 1;
+     if(a<b) return -1;
+     return 0 ;
+
+    })  
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-    
-
-}
+   return array.filter(arrays =>{
+       return ((arrays %2 ===0 ))
+   })
    
+   }
 
 
 
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    let par =  array.filter(arrays =>{
+        return ((arrays %2 ===0 ))
+
+    })
+ let aoQuadrado = par.map(par =>{
+     return Math.pow(par,2)
+ })
+
+ return aoQuadrado
+
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
   
+    let i = 0
+    let maior = - Infinity
+    while(i<array.length){
+        if(array[i]>maior){
+            maior = array[i]
+
+        }
+        i++
+    
+    }
+
+     return maior 
+
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+  
 }
 
 // EXERCÍCIO 08
