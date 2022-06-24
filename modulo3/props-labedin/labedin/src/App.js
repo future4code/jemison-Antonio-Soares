@@ -1,7 +1,17 @@
 import React from 'react';
 import './App.css';
+
+import antonio from './img/antonio.webp'
+import logolabenu from './img/unnamed.jpeg'
+import logistica from './img/logistica.png'
+import home from './img/home2.jpeg'
+import email from './img/email.jpeg'
+
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno  from './components/CardPequeno/CardPequeno';
+
+
 
 function App() {
   return (
@@ -9,29 +19,54 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          imagem={antonio} 
+          nome="Antônio-DEV" 
+          descricao="Oi, eu sou o Antônio, Sou Aluno da escola Labenu, gosto de exercícios de HTML e CSS, e gosto de assistir séries ."
         />
         
         <ImagemButton 
           imagem="https://cdn-icons-png.flaticon.com/512/271/271210.png" 
           texto="Ver mais"
         />
+       
+       <div >
+       <CardPequeno
+          imagem={home} 
+          nome="Endereço"
+          descricao="Mogi Das Cruzes - São Paulo"
+
+        />
+      </div >
+
+      <div >
+       <CardPequeno
+          imagem={email} 
+          nome="Email"
+          descricao="atmarcos28@gmail.com"
+
+        />
       </div>
+
+
+
+      </div>
+     
+
+
+
 
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
+          imagem={logolabenu} 
           nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          descricao="Estou me tornando um Desenvolvedor Web Full Stack pronto para o mercado de trabalho. São mais de 1000 horas de programação que vai me tornar um profissionl completo tanto no Back-End quanto no Front-End." 
         />
         
         <CardGrande 
-          imagem="https://logodownload.org/wp-content/uploads/2019/03/nasa-logo-0-768x768.png" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          imagem={logistica} 
+          nome="Logistica" 
+          descricao="Supervisiona o adequado armazenamento dos produtos. Planeja e organiza a disposição das mercadorias estocadas, facilitando sua identificação, localização e manuseio. Elabora relatórios diários de produção e qualidade. Identifica desvios dos padrões nos processos produtivos e desenvolve ações corretivas." 
         />
       </div>
 
