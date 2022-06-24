@@ -6,6 +6,7 @@ import logolabenu from './img/unnamed.jpeg'
 import logistica from './img/logistica.png'
 import home from './img/home2.jpeg'
 import email from './img/email.jpeg'
+import linkedin from './img/linkedin.png'
 
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
@@ -70,7 +71,7 @@ function App() {
         />
       </div>
 
-      <div className="page-section-container">
+      <div className="page-section-container-redes">
         <h2>Minhas redes sociais</h2>
         <ImagemButton 
           imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png" 
@@ -78,8 +79,8 @@ function App() {
         />        
 
         <ImagemButton 
-          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
-          texto="Twitter" 
+          imagem={linkedin} 
+          texto="Linkedin" 
         />        
       </div>
     </div>
