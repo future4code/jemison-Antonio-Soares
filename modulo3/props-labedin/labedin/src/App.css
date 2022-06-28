@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.page-section-container {
+  width: 40vw;
+  margin: 10px 0;
+}
+
+.page-section-container > h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width:400px){
+  *{
+    margin: 0%;
+    padding: 0%;
+  }
+  
+
+
+.page-section-container{
+   display: grid;
+   flex-direction: column;
+  margin-right:200px;
+
+  align-items: center;
+}
+
+.page-section-container h2{
+   font-size: 25px;
+   text-align: center;
+    display: grid;
+   flex-direction: column;
+    
+}
+
+
+.bigcard-container{
+  display: grid;
+  flex-direction: column;
+   width: 350px;
+  
+   margin-bottom: 10px;
+   margin-top: 10px;
+  
+}
+
+
+.bigcard-container p {
+
+ 
+  align-items: center;
+  font-size: 13px;
+
+}
+
+.page-section-container h2{
+  text-align: center;
+
+ 
+}
+.CardPequeno{
+  width: 350px;
+  margin: 0%;
+
+
+}
+.CardPequeno h4 {
+  margin-bottom: 1px;
+  text-align: left;
+  margin-left: 1px;
+}
+
+.ppequeno{
+
+  align-items: center;
+  font-size: 13px;
+}
+
+
+
+}
