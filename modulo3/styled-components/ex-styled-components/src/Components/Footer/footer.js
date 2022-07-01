@@ -2,9 +2,8 @@ import styled from 'styled-components'
 
 
 
-export const FooterPai= styled.div`
+export const FooterPai= styled.footer`
     background-color:Grey;
-    position: fixed;
     bottom: 0;
     width: 98%;
     height:50px;
@@ -12,6 +11,9 @@ export const FooterPai= styled.div`
     font-size:10px;
     color:black;
     text-align:center;
+     position:fixed;
+     
+
 
 `
 
