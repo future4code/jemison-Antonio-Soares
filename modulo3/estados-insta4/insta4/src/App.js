@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
-import Post from './components/Post/Post';
+import Post from  './components/Post/Post'
 
 const MainContainer = styled.div`
   display: flex;
@@ -9,32 +9,44 @@ const MainContainer = styled.div`
   align-items: center;
 `
 function App() {
+
+
+
+  const posts = [
+  {nomeUsuario:"paulinha",fotoUsuario:"https://picsum.photos/50/49",fotoPost:"https://picsum.photos/200/149"},
+  {nomeUsuario:"laurinha" , fotoUsuario:"https://picsum.photos/50/48" ,fotoPost:"https://picsum.photos/200/148"},
+  {nomeUsuario:"milena", fotoUsuario:"https://picsum.photos/50/47", fotoPost:"https://picsum.photos/200/147"}
+  
+]
+
+
+const postMapeado = posts.map((postagens,index) => {
+
 return(
-  <MainContainer>
-           <Post
-            nomeUsuario={'paulinha'}
-            fotoUsuario={'https://picsum.photos/50/50'}
-            fotoPost={'https://picsum.photos/200/190'}
-          />
 
-          <Post
-            nomeUsuario={'laurinha'}
-            fotoUsuario={'https://picsum.photos/50/49'}
-            fotoPost={'https://picsum.photos/200/191'}
-          />
+<Post key={index} 
+  nomeUsuario={postagens.nomeUsuario}
+  fotoUsuario={postagens.fotoUsuario}
+  fotoPost={postagens.fotoPost}
 
+/>
 
-
-           <Post
-            nomeUsuario={'milena'}
-            fotoUsuario={'https://picsum.photos/50/48'}
-            fotoPost={'https://picsum.photos/200/192'}
-          />
-          
-        </MainContainer>
 )
 
-}
 
 
+})
+
+console.log(postMapeado)
+
+  return (
+
+  <MainContainer>
+    
+    {postMapeado}
+
+  </MainContainer>
+
+  )}
+  
 export default App;
