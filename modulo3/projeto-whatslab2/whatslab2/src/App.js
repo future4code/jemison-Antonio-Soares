@@ -9,7 +9,7 @@ function WhatsLab() {
 return (
 <div classNamePai='Pai'>
   <Main/>
-
+  
 
 </div>
 )

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { InputMensagem, Balao, Section, MainInput, ConteinerPai } from './StyledComMsg'
+import Click from './img/click.png'
 
 export function Main () {
 
@@ -21,20 +22,29 @@ export function Main () {
         setInputMensagem("")
         setInputUsuario("")
     }
-    
+   
     const mensagensMapeada = usuario.map((pessoa, index) => {
         return(
             <Balao key={index}>
-                <p>{pessoa.nome}</p>
+                <b>
+                  <u>
+                  <p>{pessoa.nome}</p>
+                  </u>
+                </b>
                 <p>{pessoa.mensagem}</p>
             </Balao>
         )
     })
 
+  
+
+
     
     return (
         <ConteinerPai>
+         
             <Section>
+           
                 <div>
                     {mensagensMapeada}
                 </div>
@@ -42,25 +52,28 @@ export function Main () {
                    
                     <label/>
                         <input 
-                        placeholder="Escreva seu nome" size={15}
+                        placeholder="Nome" 
                         value = {inputUsuario}
                         onChange = {handleInputUsuario}
                         /> 
                     <label/>
                    
                     <InputMensagem>
+
                     <input 
-                        placeholder="Escreva sua mensagem" size={40}
+                        placeholder="Escreva sua mensagem"  
                         value = {inputMensagem}
                         onChange = {handleInputMensagem}
                     />
                     </InputMensagem> 
-                    <button onClick={addUsuario}>Enviar</button>
+                    <img className="click" src={Click} alt="" onClick={addUsuario}></img>  
                 </MainInput>
                 
             </Section>
+            
+            
         </ConteinerPai>
+        
     );
   }
-
 
