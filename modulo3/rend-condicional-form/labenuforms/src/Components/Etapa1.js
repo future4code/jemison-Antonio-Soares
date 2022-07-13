@@ -8,7 +8,7 @@ export function DadosGerais({mudarPagina}) {
   const [nome,setNome] = useState('')
   const [idade,setIdade] = useState('')
   const [email,setEmail] = useState('')
-  const [escolaridade,setEscolaridade] = useState('InformacoesGerais')
+  const [escolaridade,setEscolaridade] = useState('03')
 
 
 // eventos
@@ -57,10 +57,10 @@ function handleSubmite (e) {
 
             <select value={escolaridade} onChange={handleEscolaridade}> 
 
-             <option  selected value='InformacoesGerais'>Ensino Medio Incompleto</option>
-             <option selected value='InformacoesGerais'>Ensino Medio Completo </option>
-             <option selected value='EnsinoSuperior'>Superior Incompleto</option>
-             <option selected value='EnsinoSuperior'>Superior Completo</option>
+             <option  selected value='03'>Ensino Medio Incompleto</option>
+             <option selected value='03'>Ensino Medio Completo </option>
+             <option selected value='02'>Superior Incompleto</option>
+             <option selected value='02'>Superior Completo</option>
 
             
 

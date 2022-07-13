@@ -19,7 +19,7 @@ function handleCursoComplementar (e) {
 
 function   handleSubmite  (e) {
   e.preventDefault()
-  mudarPagina('EtapaFinal')
+  mudarPagina('04')
 }
 
 

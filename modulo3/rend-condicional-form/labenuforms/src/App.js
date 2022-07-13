@@ -8,29 +8,29 @@ import {EtapaFinal} from './Components/EtapaFinal'
 
 function App() {
 
-  const [etapa,setEtapa] = useState('DadosGerais')
+  const [etapa,setEtapa] = useState('01')
 
 
   const renderizar =() => {
 
  switch (etapa){
 
-    case'DadosGerais':
+    case'01':
     return <DadosGerais mudaPagina ={mudaPagina} />
     break
   
 
-    case'EnsinoSuperior':
+    case'02':
     return <EnsinoSuperior mudaPagina ={mudaPagina} />
     break
   
 
-    case'InformacoesGerais':
+    case'03':
     return <InformacoesGerais mudaPagina ={mudaPagina} />
     break
   
 
-    case'EtapaFinal':
+    case'04':
     return <EtapaFinal mudaPagina ={mudaPagina} />
     break
   

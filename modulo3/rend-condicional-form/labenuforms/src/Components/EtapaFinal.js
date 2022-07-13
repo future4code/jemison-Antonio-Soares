@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function  EtapaFinal () {
+export function  EtapaFinal ({mudarPagina}) {
     
     return(
         <div>
