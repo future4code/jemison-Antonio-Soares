@@ -1,1 +1,1 @@
-link surge:
+link surge: staking-gold.surge.sh
