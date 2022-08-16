@@ -13,6 +13,7 @@ export function FormularioParaAdm (){
     return(
         
         <p>
+          <h1>Formulário para o administrador criar uma nova viagem</h1>
            <button onClick={ backToHome }>home</button> 
         </p>
         

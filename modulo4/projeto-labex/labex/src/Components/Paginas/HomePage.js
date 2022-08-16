@@ -20,8 +20,10 @@ export function Login (){
 
           <h1>Home</h1>
 
+          <h1> Para o usuário escolher entre Área Administrativa e Lista de Viagens</h1>
+
          <button onClick={ goToAdmPag }>Login</button>
-          <button onClick={goToListTrip}>ListTrips</button>
+          <button onClick={goToListTrip}>lista de viagens </button>
      </p>
     
     )

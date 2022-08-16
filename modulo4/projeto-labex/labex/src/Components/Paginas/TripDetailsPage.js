@@ -12,6 +12,8 @@ export function ListaDeDetalhes (){
   return(
       
       <p>
+        <h1> Para o administrador ver o detalhe de uma viagem específica,
+           bem como os candidatos que aplicaram para ela</h1>
          <button onClick={ backToHome }>home</button> 
       </p>
       

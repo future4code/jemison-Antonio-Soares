@@ -14,6 +14,8 @@ export function ListaDeViagensAdm (){
     return(
         <p>
         <h1>AdminHome</h1>
+        <h1>Para o administrador ver a lista de viagens e 
+          poder deletá-las ou acessar o detalhe de cada uma delas</h1>
      <button onClick={ goToCreTriPag }>CreateTrip</button>
      <button onClick={goToTripDetPag}>TripDetails</button>
       

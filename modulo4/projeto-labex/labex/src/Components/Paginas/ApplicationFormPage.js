@@ -14,6 +14,7 @@ const goToHome = () =>{
     
         <p>
             <h1>ApplicationForm</h1>
+            <h1> Para o usuário se candidatar à viagens, página que vai ter o formulário de inscrição</h1>
      <button onClick={ goToHome }>Home</button>
      
         </p>
