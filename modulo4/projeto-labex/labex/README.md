@@ -6,4 +6,4 @@ CRIAR VIAGEM :https://wireframe.cc/7NgTol
 DETALHES DE VIAGENS E PEDIDOS : https://wireframe.cc/UBA8fS
 FORMULARIO PARA SOLICITAR UMA VIAGEM :https://wireframe.cc/bD2iRB
 
-link surge :wicked-bun.surge.sh
+link surge :sleepy-yoke.surge.sh
