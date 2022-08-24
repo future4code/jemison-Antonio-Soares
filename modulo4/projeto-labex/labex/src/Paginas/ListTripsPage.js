@@ -1,14 +1,14 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom';
-import { useRequestData } from "../../Hocks/useRequestData";
-import { URLBase } from "../../Apis/apis";
-import { CardListaDeViagens } from "../../Styled/CardListaDeViagens";
+import { useRequestData } from "../hooks/useRequestData";
+import { URLBase } from "../API/apis";
+
 
 
 
  export function ListaDeViagensUsuario (){
      
- const [viagem, isLoading, error] = useRequestData(`${URLBase}trips`)
+ const [viagem, isLoading, error] = useRequestData(`${URLBase}/trips`)
 
  // map para a url 
 
@@ -20,7 +20,7 @@ import { CardListaDeViagens } from "../../Styled/CardListaDeViagens";
 
      
 
-    <CardListaDeViagens>
+    <div>
 
       <header> {nome.name} </header>
       
@@ -33,7 +33,7 @@ import { CardListaDeViagens } from "../../Styled/CardListaDeViagens";
       <button>Comprar </button>
       
       
-    </CardListaDeViagens>
+    </div>
 
 
   

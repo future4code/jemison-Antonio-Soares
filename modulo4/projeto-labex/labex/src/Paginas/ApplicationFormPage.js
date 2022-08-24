@@ -3,13 +3,19 @@ import {useNavigate} from 'react-router-dom';
 
 
 
- export function FormularioDeViagens (){
+ export function UsuarioSeIncreverParaViagem(){
+
+
+// acoes dos boteos 
+
     const navigate = useNavigate();
 
-const goToHome = () =>{
+
+    const goToHome = () =>{
   navigate("/")
 }
-   
+// fim das acoes 
+
     return(
     
         <p>

@@ -3,8 +3,10 @@ import {useNavigate} from 'react-router-dom';
 
 
 
-export function FormularioParaAdm (){
-    
+export function CriarViagemParaUsuarioAdm (){
+
+
+  
     const navigate = useNavigate();
       const backToHome = () =>{
         navigate("/")

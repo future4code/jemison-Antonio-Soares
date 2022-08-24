@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 
 
 
-export function Login (){
+export function PaginaInicial (){
 
     const navigate = useNavigate();
   const goToAdmPag = () =>{

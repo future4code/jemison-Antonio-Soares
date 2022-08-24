@@ -1,4 +1,4 @@
-import { Routers } from './Components/Router';
+import { Routers } from './Rotas/Router';
 import React from 'react';
 
 function App() {
