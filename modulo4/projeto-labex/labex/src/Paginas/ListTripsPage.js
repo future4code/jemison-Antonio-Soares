@@ -2,38 +2,31 @@ import React from "react";
 import {useNavigate} from 'react-router-dom';
 import { useRequestData } from "../hooks/useRequestData";
 import { URLBase } from "../API/apis";
-
+import {DetalhesDasTrips, Header, HeaderPAGES,Button,FooterTrips} from '../CSS/ListTripsPageSTYLED'
 
 
 
  export function ListaDeViagensUsuario (){
      
  const [viagem, isLoading, error] = useRequestData(`${URLBase}/trips`)
-
- // map para a url 
-
- const listaDeViagens=  viagem && viagem.trips.map((nome)=>{
+ const listaDeViagens=  viagem && viagem.trips.map((item)=>{
 
   
   return(
      
 
-     
+    <DetalhesDasTrips>
 
-    <div>
+<p> {item.name} </p>
 
-      <header> {nome.name} </header>
+<Header>DESCRIÇÃO DA VIAGEM </Header>
+<p>{item.description}</p>
+<Header>DURAÇÃO</Header>
+<p>{item.durationInDays}</p>
+<Header>DATA DA VIAGEM </Header>
+<p> {item.date} </p>
       
-        <p className="Descricao">{nome.description}</p>
-
-        <p className="Diarias">{nome.durationInDays}</p>
-
-      <p className="Data"> {nome.date} </p>
-
-      <button>Comprar </button>
-      
-      
-    </div>
+    </DetalhesDasTrips>
 
 
   
@@ -55,11 +48,11 @@ import { URLBase } from "../API/apis";
    return(
      <div>
       
- 
-                 <h1>Lista de Viagens </h1>
-                 <button onClick={ goToSingUp}>incrição para viagem</button>
-                 <button onClick={goToLastPage}>Home</button>
-       
+     <FooterTrips>
+      <HeaderPAGES>LISTA DE VIAGENS </HeaderPAGES>
+      <Button onClick={ goToSingUp}>GARANTA JÁ SUA VIAGEM</Button>
+      <Button onClick={goToLastPage}>PAGINA INICIAL</Button>
+      </FooterTrips> 
  
         
 

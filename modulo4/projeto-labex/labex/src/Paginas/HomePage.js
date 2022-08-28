@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom';
-
+import {Button,ConteinerPai, Header, HeaderPAGES} from '../CSS/HomePageSTYLED'
 
 
 export function PaginaInicial (){
@@ -16,15 +16,17 @@ export function PaginaInicial (){
 
     return(
 
-     <p>
+     <ConteinerPai>
 
-          <h1>Home</h1>
+         
 
-          <h1> Para o usuário escolher entre Área Administrativa e Lista de Viagens</h1>
+          <HeaderPAGES> LABEX</HeaderPAGES>
+          <p> Tá afim de ter a melhor experiancia da sua vida?</p>
+          <Header>Escolha uma das nossas Viagens  🛫 </Header>
 
-         <button onClick={ goToAdmPag }>Login</button>
-          <button onClick={goToListTrip}>lista de viagens </button>
-     </p>
+         <Button onClick={ goToAdmPag }>LOGIN ADMINISTRADOR</Button>
+          <Button onClick={goToListTrip}>LISTA DE VIAGENS </Button>
+     </ConteinerPai>
     
     )
 }

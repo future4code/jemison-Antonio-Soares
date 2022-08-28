@@ -2,15 +2,14 @@ import React from "react";
 import {useNavigate} from 'react-router-dom';
 import {URLBase} from '../API/apis'
 import {useForm} from '../hooks/useForm'
-
-
 import axios from 'axios'
+import { Button, Formulario,ConteinerPai } from "../CSS/LoginPageSTYLED";
 
 
 export function LoginAdm  (){
 
 
-  const [form,onChange] = useForm ({email: "" , password:"" })
+  const {form,onChange} = useForm ({email: "" , password:"" })
 
 // acoes dos botoes 
     const navigate = useNavigate();
@@ -26,13 +25,9 @@ export function LoginAdm  (){
 // fim das acoes dos botoes 
 
 
-
-// funcao para logar como adm 
-
-
    const fazerLogin = (event) => {
 
-    event.preventDefault() //evita que a página seja renderizada novamente ao enviar o formulário
+    event.preventDefault() 
     axios.post(`${URLBase}/login`,form)
 
         .then((response) => {
@@ -52,36 +47,38 @@ export function LoginAdm  (){
     
   return(
       
-    <div>
-            <h1> Login Admistrador </h1>
-            <form onSubmit={fazerLogin}>
+    <ConteinerPai>
+            
+            <Formulario onSubmit={fazerLogin}>
+
+                <h1> LOGIN ADMINISTRADOR </h1>
                 <label htmlFor="email"> Email: </label>
                 <input
-                    name="email" //colocar igual a propriedade que está no estado inicial do useForm!!!!!!
-                    id="email" //colocar igual ao htmlFor do label
+                    name="email" 
+                    id="email" 
                     placeholder="E-mail"
                     value={form.email}
                     onChange={onChange}
-                    type="email" //faz validações de e-mail
-                    required //torna campo obrigatório
+                    type="email" 
+                    required 
                 />
                 <label htmlFor="senha"> Senha: </label>
                 <input
-                    name="password" //colocar igual a propriedade que está no estado inicial do useForm!!!!!!
-                    id="senha" //colocar igual ao htmlFor do label
+                    name="password" 
+                    id="senha" 
                     placeholder="Senha"
                     value={form.password}
                     onChange={onChange}
-                    type="password" //oculta senha
-                    pattern="^.{3,}$" //padrão Regex
+                    type="password" 
+                    pattern="^.{3,}$" 
                     title="mínimo de 3 caracteres"
-                    required //torna campo obrigatório
+                    required 
                 />
 
-                <button type="submit" >Logar </button>
-                <button onClick={goToLastPage} >home </button>
-            </form>
-        </div>
+                <Button type="submit" >LOGIN </Button>
+                <Button onClick={goToLastPage} >HOME </Button>
+            </Formulario>
+        </ConteinerPai>
       
   )
 }
