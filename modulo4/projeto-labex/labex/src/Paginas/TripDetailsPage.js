@@ -4,29 +4,27 @@ import { URLBase } from "../API/apis";
 import { useProtectedPage } from "../hooks/useProtectePage";
 import { useNavigate, useParams } from "react-router-dom";
 import { useRequestData } from "../hooks/useRequestData";
+import { ConteinerPai,Button, HeaderPAGES } from "../CSS/TripDetailsPageSTYLED";
 
-/* AprovacaoDeViagensAdm */
+
 
 
   export function AprovacaoDeViagensAdm () {
 
-    //Pagina privada
+    
     useProtectedPage() 
 
-    // Mudança de pagina.
     const navigate = useNavigate();
 
     const pathVoltar = () =>{
         navigate(-1)
     }
 
-    // Id para entrar nas paginas privadas
     const params = useParams()
 
-    // Lista de viagem que tem candidatos para serem aprovados
     const [data, loading, erro] = useRequestData(`${URLBase}/trip/${params.id}`)
       
-    // Mapea os candidatos
+    
     const listCandidates = data && data.trip&&data.trip.candidates.map((item) => {
      return( 
      <section key={item.id}>
@@ -50,7 +48,7 @@ import { useRequestData } from "../hooks/useRequestData";
         )
     })
 
-    // função para decidir se o candidato é aprovado ou não.
+    
     const decideCandidate = (id, decision) =>{
         const body ={
             approve : decision
@@ -74,13 +72,13 @@ import { useRequestData } from "../hooks/useRequestData";
     }
 
     return(
-        <div>
-
+        <ConteinerPai>
+             
             <div>
                 {data ? (
                         <h1>{data.trip.name}</h1>
-                    ): <h1>Algo deu errado, tente novamente</h1>}
-                     <button onClick={pathVoltar}>Voltar</button>
+                    ): <h1>Algo deu errado</h1>}
+                     <Button onClick={pathVoltar}>Voltar</Button>
             </div>
             
             {loading && <p> Carregando  Usuários</p>}
@@ -89,11 +87,13 @@ import { useRequestData } from "../hooks/useRequestData";
             {!loading && data && data.trip && data.trip.candidates === 0 && (<p> Não há viagens</p>)}
 
             <div>
-                <h1>Lista de aprovados</h1>
+                <HeaderPAGES>APROVADOS</HeaderPAGES>
                 {listApproved}
             </div>
-
-        </div>
+            
+        </ConteinerPai>
     )
 }
+
+
 

@@ -9,6 +9,7 @@ export const ConteinerPai=styled.div`
     width: 50%;
     padding: 30px;
     border: 5px solid #483D8B ;
+    margin-top:5%;
     
   
     p{
