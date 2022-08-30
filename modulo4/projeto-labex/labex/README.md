@@ -18,5 +18,8 @@ link surge :https://burly-horn.surge.sh/
 
 
 
+o email e senha para acessar a area do administrador :
 
+email: astrodev@gmail.com.br
+password: 123456
 
