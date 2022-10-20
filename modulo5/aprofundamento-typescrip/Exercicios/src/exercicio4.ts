@@ -1,22 +1,28 @@
-interface Person {
-    nome:string, 
-    idade:number, 
-    dataDaConsulta:string
+type pokemon = {
+	name: string,
+  types: string,
+	healthPoints: number
 }
 
-const consultas: Person[] = [
-    { nome: "João", idade: 23, dataDaConsulta: "01/10/2021"},
-    { nome: "Pedro", idade: 31, dataDaConsulta: "02/07/2021"},
-    { nome: "Paula", idade: 26, dataDaConsulta: "03/11/2021"},
-    { nome: "Márcia", idade: 45, dataDaConsulta: "04/05/2021"}
-]
+const pokemon1: pokemon = {
+  name: "Charmander",
+  types: "Fire",
+  healthPoints: 28
+}
 
-const organizando = consultas.sort((a: Person, b: Person):any =>{
-    if(a.nome < b.nome){
-        return -1;
-    }else{
-        return true;
-    }
-})
+const pokemon2: pokemon = {
+  name: "Bulbasaur",
+  types: "Grass/Poison",
+  healthPoints: 31
+}
 
-console.table(organizando)
+const pokemon3: pokemon = {
+  name: "Squirtle",
+  types: "Water",
+  healthPoints: 35
+}
+
+// b) R:Para transformas em JS é só utilizar o comando "tsc nomeDoArquivo.ts". Toda vez que se altera o código,
+//precisa rodar o comando novamente.
+
+// c) R:Já esta na pasta src, então se estivesse fora mudaria apenas o caminho eu acho.
