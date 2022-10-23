@@ -3,7 +3,7 @@ type Clientes = {
     saldoTotal: number
     debitos: number[]
 }
-let clientesBanco: Clientes[] = [
+let clientes: Clientes[] = [
     { cliente: "João", saldoTotal: 1000, debitos: [100, 200, 300] },
     { cliente: "Paula", saldoTotal: 7500, debitos: [200, 1040] },
     { cliente: "Pedro", saldoTotal: 10000, debitos: [5140, 6100, 100, 2000] },
@@ -12,12 +12,12 @@ let clientesBanco: Clientes[] = [
     { cliente: "Soter", saldoTotal: 1200, debitos: [] }
 ]
 
-const Devedores = ((array: Clientes[]): any => {
+const Devedor = ((array: Clientes[]): any => {
 
     let newClientes: Clientes[] = array.map((devedor) => {
 
-        let valorDebito: number = devedor.debitos.reduce((num1: number, num2: number): number => num1 + num2, 0)
-        
+        let valorDebito: number = devedor.debitos.reduce((a: number, b: number): number => a + b, 0)
+
         return { cliente: devedor.cliente, saldoTotal: (devedor.saldoTotal - valorDebito), debitos: [] }
 
     }).filter((clienteDevedor) => {
@@ -26,4 +26,4 @@ const Devedores = ((array: Clientes[]): any => {
     return newClientes
 })
 
-console.table(Devedores(clientesBanco))
+console.log(Devedor(clientes))
