@@ -41,28 +41,19 @@ app.get("/posts",(req:Request , res:Response) =>{
 // Exercicio 8 
 
 
-app.get("/posts/userId",(req:Request , res:Response) =>{
-      
-   /*  const Postagens = req.params.userId */
-    const user = req.headers.id
+app.get('/post/:userId', (req:Request, res:Response) =>{
 
-    const Filtrando = todosPosts.filter((item:any)=>{
+    const idPostagens = req.params.userId 
 
-        if(item.userId === user) {
-            res.status(200).send(todosPosts)
-        }
-    
-        const userFilter = todosPosts.find((user:any)=>{
-            return user.userId 
-    
-        })
-
-    })
-   
-
-    res.status(200).send(Filtrando)
+     const postsFiltrado = todosPosts.filter((post)=>{
+        return Number(idPostagens) === post.userId
+     })
+     
+res.status(200).send(postsFiltrado)
 })
+
 
 app.listen(3003, () => {
     console.log("Server is running in http://localhost:3003");
+    
 });
